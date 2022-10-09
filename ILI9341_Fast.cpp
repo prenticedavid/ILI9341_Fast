@@ -282,8 +282,8 @@ void ILI9341::init()
 #endif
 
   SPI.begin();
-#ifdef COMPATIBILITY_MODE
-  spiSettings = SPISettings(16000000, MSBFIRST, SPI_MODE0);  // 8000000 gives max speed on AVR 16MHz
+#ifdef COMPATIBILITY_MODE  //.kbv
+  spiSettings = SPISettings(SPI_DEFAULT_FREQ, MSBFIRST, SPI_MODE0);  // 8000000 gives max speed on AVR 16MHz
 #else
   SPI.setClockDivider(SPI_CLOCK_DIV2);
   SPI.setDataMode(SPI_MODE0);

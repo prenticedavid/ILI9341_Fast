@@ -17,16 +17,21 @@
 #ifndef _ILI9341_FAST_H_
 #define _ILI9341_FAST_H_
 
+#define SPI_DEFAULT_FREQ 8000000 //.kbv
+
 // ------------------------------
 // remove "define COMPATIBILITY_MODE" for best performance on 16MHz AVR Arduinos
 // if defined - the library should work on all Arduino compatible boards
-//#define COMPATIBILITY_MODE
+#include "Arduino.h"  //.kbv
+#if !defined(SPCR)
+#define COMPATIBILITY_MODE
+#endif
 
 // define when CS pin is always connected to the ground
 //#define CS_ALWAYS_LOW
 // ------------------------------
 
-#include "Arduino.h"
+//#include "Arduino.h" //.kbv
 #include "Print.h"
 #include <Adafruit_GFX.h>
 #include <avr/pgmspace.h>
