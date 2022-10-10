@@ -17,7 +17,7 @@
 #ifndef _ILI9341_FAST_H_
 #define _ILI9341_FAST_H_
 
-#define SPI_DEFAULT_FREQ 8000000 //.kbv was 16MHz default arse
+#define SPI_DEFAULT_FREQ 8000000 //.kbv was 16MHz default arse bum
 
 // ------------------------------
 // remove "define COMPATIBILITY_MODE" for best performance on 16MHz AVR Arduinos
